@@ -16,6 +16,7 @@ body {
   text-align: center;
   background-color: #71816d;
   animation: pulse 5s;
+  border-radius: 25px;
 }
 
 input[type="submit"],
@@ -38,6 +39,7 @@ td {
   text-align: left;
   color: white;
   animation: pulse 5s;
+  border-radius: 5%;
 }
 @keyframes pulse {
   0% {
