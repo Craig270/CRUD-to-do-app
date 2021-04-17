@@ -1,0 +1,23 @@
+{
+  "name": "crud-todoapp",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000C\u0000R\u0000U\u0000D\u0000-\u0000t\u0000o\u0000-\u0000d\u0000o\u0000-\u0000a\u0000p\u0000p\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Craig270/CRUD-to-do-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Craig270/CRUD-to-do-app/issues"
+  },
+  "homepage": "https://github.com/Craig270/CRUD-to-do-app#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0"
+  }
+}
