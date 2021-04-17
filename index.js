@@ -3,30 +3,8 @@ var app = new (function () {
 
   this.tasks = [];
 
-  this.FetchAll = function () {
-    var data = "";
-
-    if (this.tasks.length > 0) {
-      for (i = 0; i < this.tasks.length; i++) {
-        data += "<tr>";
-        data += "<td>" + (i + 1) + ". " + this.tasks[i] + "</td>";
-        data +=
-          '<td><button onclick="app.Edit(' +
-          i +
-          ')"  class="btn btn-warning">Edit</button></td>';
-        data +=
-          '<td><button onclick="app.Delete(' +
-          i +
-          ')"  class="btn btn-danger">Delete</button></td>';
-        data += "</tr>";
-      }
-    }
-
-    this.Count(this.tasks.length);
-    return (this.el.innerHTML = data);
-  };
-
   this.Add = function () {
+    //Create a new Task on the Array  (Create)
     el = document.getElementById("add-todo");
     // Get the value
     var task = el.value;
@@ -41,7 +19,27 @@ var app = new (function () {
     }
   };
 
+  this.FetchAll = function () {
+    //Display all to-do list items (Read)
+    var data = "";
+
+    if (this.tasks.length > 0) {
+      for (i = 0; i < this.tasks.length; i++) {
+        data += `<tr>
+                      <td>${i + 1}. ${this.tasks[i]}</td>
+                      <td> <button onclick="app.Edit(${i})" class="btn btn-warning">Edit</button> </td>
+                      <td> <button onclick="app.Delete(${i})" class="btn btn-danger">Delete</button> </td>
+                      </tr>
+                    `;
+      }
+    }
+
+    this.Count(this.tasks.length);
+    return (this.el.innerHTML = data);
+  };
+
   this.Edit = function (item) {
+    //Update the to do list (Update)
     var el = document.getElementById("edit-todo");
     // Display value in the field
     el.value = this.tasks[item];
@@ -65,6 +63,7 @@ var app = new (function () {
   };
 
   this.Delete = function (item) {
+    //Deletes a task (Delete)
     // Delete the current row
     this.tasks.splice(item, 1);
     // Display the new list
@@ -79,9 +78,9 @@ var app = new (function () {
       if (data == 1) {
         name = "Task";
       }
-      el.innerHTML = data + " " + name;
+      el.innerHTML = `${data} ${name}`;
     } else {
-      el.innerHTML = "No " + name;
+      el.innerHTML = `No ${name}`;
     }
   };
 })();

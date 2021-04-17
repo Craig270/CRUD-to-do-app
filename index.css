@@ -52,6 +52,7 @@ td {
 
 .to-do {
   background: transparent !important;
+  text-align: center;
 }
 .slide {
   animation-duration: 3s;
