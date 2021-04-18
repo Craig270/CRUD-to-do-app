@@ -1,4 +1,4 @@
-var app = new (function () {
+let app = new (function () {
   this.el = document.getElementById("tasks");
 
   this.tasks = [];
@@ -7,7 +7,7 @@ var app = new (function () {
     //Create a new Task on the Array  (Create)
     el = document.getElementById("add-todo");
     // Get the value
-    var task = el.value;
+    let task = el.value;
 
     if (task) {
       // Add the new value
@@ -21,7 +21,7 @@ var app = new (function () {
 
   this.FetchAll = function () {
     //Display all to-do list items (Read)
-    var data = "";
+    let data = "";
 
     if (this.tasks.length > 0) {
       for (i = 0; i < this.tasks.length; i++) {
@@ -40,7 +40,7 @@ var app = new (function () {
 
   this.Edit = function (item) {
     //Update the to do list (Update)
-    var el = document.getElementById("edit-todo");
+    let el = document.getElementById("edit-todo");
     // Display value in the field
     el.value = this.tasks[item];
     // Display fields
@@ -49,7 +49,7 @@ var app = new (function () {
 
     document.getElementById("save-edit").onsubmit = function () {
       // Get value
-      var task = el.value;
+      let task = el.value;
 
       if (task) {
         // Edit value
@@ -71,8 +71,8 @@ var app = new (function () {
   };
 
   this.Count = function (data) {
-    var el = document.getElementById("counter");
-    var name = "Tasks";
+    let el = document.getElementById("counter");
+    let name = "Tasks";
 
     if (data) {
       if (data == 1) {
